@@ -328,6 +328,7 @@ with DAG(
         # /campaign/get/
 
         # fields_list = FIELDS
+
         # fields = json.dumps(fields_list)
         # status = STATUS
         # campaign_name = CAMPAIGN_NAME
