@@ -12,8 +12,8 @@ from airflow import DAG
 from airflow.utils.dates import days_ago
 from urllib.parse import urlencode, urlunparse
 from airflow.operators.python import PythonOperator
+from ..dags import DEFAULT_ARGS
 from sqlalchemy import create_engine
-from dags import DEFAULT_ARGS
 
 with DAG(
         dag_id='tiktok',

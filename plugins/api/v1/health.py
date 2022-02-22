@@ -1,6 +1,6 @@
 from flask_restx import Resource, fields
-from plugins.api.v1.blueprint import api
-from plugins.api.version import version
+from blueprint import api
+from api.version import version
 
 health = api.model('Health', {
     'version': fields.String,

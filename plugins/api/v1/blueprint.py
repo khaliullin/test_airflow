@@ -39,5 +39,3 @@ api = Api(
 from plugins.api.v1.health import Health
 api.add_resource(Health, HEALTH_ROUTE)
 
-from plugins.api.v1.tiktok_callback import TiktokCallback
-api.add_resource(TiktokCallback, TICKTOK_CALLBACK)

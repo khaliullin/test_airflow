@@ -1,25 +1,26 @@
 import os
 import subprocess
-import logging 
+import logging
 import datetime
 import time
 import boto3
 import requests
 import simplejson as json
-import pandas as pd  
+import pandas as pd
 from plugins.operators.api_to_redshift_operator import ApiToRedshiftOperator
 from plugins.operators.s3_to_redshift_operator import S3ToRedshiftOperator
 from airflow.operators.subdag import SubDagOperator
-from plugins.failure_notifications import *
-from plugins.success_notifications import success_notification
 import plugins.redshift as redshift
- 
+
+
 def _failure_notification(context):
     # do nothing yet here
     print(context)
     return True
 
+
 log = logging.getLogger("logger")
+
 
 DEFAULT_ARGS = {
     'owner': 'airflow',
@@ -30,8 +31,6 @@ DEFAULT_ARGS = {
     'start_date': datetime.datetime(2018, 1, 1), 
     'retries': 1,
     'retry_delay': datetime.timedelta(minutes=5),
-    'on_failure_callback': failure_notification,
-    'on_success_callback': success_notification
     # 'queue': 'bash_queue',
     # 'pool': 'backfill',
     # 'priority_weight': 10,
