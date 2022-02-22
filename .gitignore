@@ -19,3 +19,7 @@ credentials.json
 Heroku.md
 away-secret.key
 standalone_admin_password.txt
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
