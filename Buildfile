@@ -1,1 +1,1 @@
-web: python other/kms/env_yaml_to_dotenv.py
+web: python env_yaml_to_dotenv.py
