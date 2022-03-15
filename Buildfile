@@ -1,1 +1,0 @@
-web: python env_yaml_to_dotenv.py
