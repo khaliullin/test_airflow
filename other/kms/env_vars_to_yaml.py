@@ -22,7 +22,7 @@ def read_file(source_file):
             if key_separator not in line:
                 key_separator = ":"
             key = line.split(key_separator)[0].strip().replace("'", "").replace('"', '')
-            value = line.split(key_separator)[1].strip().replace("'", "").replace('"', '')
+            value = line.split(key_separator, 1)[1].strip().replace("'", "").replace('"', '')
             if value.endswith(","):
                 value = value[:-1]
             env_vars_dict[key] = value
